@@ -114,6 +114,10 @@ extension Defaults.Keys {
     
         // MARK: Calendar
     static let calendarSelectionState = Key<CalendarSelectionState>("calendarSelectionState", default: .all)
+    static let hideAllDayEvents = Key<Bool>("hideAllDayEvents", default: false)
+    
+        // MARK: Reminders
+    static let showReminders = Key<Bool>("showReminders", default: true)
     
         // MARK: Fullscreen Media Detection
     static let alwaysHideInFullscreen = Key<Bool>("alwaysHideInFullscreen", default: false)

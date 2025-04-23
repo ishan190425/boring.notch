@@ -115,7 +115,12 @@ class CalendarManager: ObservableObject {
         
         let endOfWeek = Calendar.current.date(byAdding: .day, value: 1, to: currentWeekStartDate)!
         let predicate = eventStore.predicateForEvents(withStart: currentWeekStartDate, end: endOfWeek, calendars: self.selectedCalendars)
-        let fetchedEvents = eventStore.events(matching: predicate)
+        var fetchedEvents = eventStore.events(matching: predicate)
+        
+        // Filter out all-day events if the setting is enabled
+        if Defaults[.hideAllDayEvents] {
+            fetchedEvents = fetchedEvents.filter { !$0.isAllDay }
+        }
         
         DispatchQueue.main.async {
             self.events = fetchedEvents.sorted { $0.startDate < $1.startDate }

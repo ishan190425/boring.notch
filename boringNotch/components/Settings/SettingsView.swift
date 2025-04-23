@@ -37,6 +37,9 @@ struct SettingsView: View {
                 NavigationLink(destination: CalendarSettings()) {
                     Label("Calendar", systemImage: "calendar")
                 }
+                NavigationLink(destination: RemindersSettings()) {
+                    Label("Reminders", systemImage: "checkmark.circle")
+                }
                 if extensionManager.installedExtensions
                     .contains(
                         where: { $0.bundleIdentifier == hudExtension

@@ -29,6 +29,9 @@
     "%lld" : {
 
     },
+    "%lld days" : {
+
+    },
     "%lld%%" : {
 
     },
@@ -76,7 +79,13 @@
     "Add" : {
 
     },
+    "Add a reminder to get started" : {
+
+    },
     "Add manually" : {
+
+    },
+    "Add New Reminder" : {
 
     },
     "Add new visualizer" : {
@@ -94,6 +103,9 @@
     "All-day" : {
 
     },
+    "All-day events hidden" : {
+
+    },
     "Always hide in fullscreen" : {
 
     },
@@ -104,6 +116,9 @@
 
     },
     "Appearance" : {
+
+    },
+    "Are you sure you want to clear all clipboard history? This action cannot be undone." : {
 
     },
     "Automatically check for updates" : {
@@ -210,6 +225,15 @@
     "Circle" : {
 
     },
+    "Clear" : {
+
+    },
+    "Clear Clipboard History" : {
+
+    },
+    "Clipboard Settings" : {
+
+    },
     "Close" : {
 
     },
@@ -222,6 +246,12 @@
           }
         }
       }
+    },
+    "Copy something to see it here" : {
+
+    },
+    "Copy to clipboard" : {
+
     },
     "Custom color" : {
       "localizations" : {
@@ -248,6 +278,9 @@
     "Default" : {
 
     },
+    "Delete" : {
+
+    },
     "Description" : {
 
     },
@@ -255,6 +288,9 @@
 
     },
     "Disabled" : {
+
+    },
+    "Done" : {
 
     },
     "Download" : {
@@ -296,6 +332,9 @@
     "Drop files here" : {
 
     },
+    "Due Date" : {
+
+    },
     "Easily copy, store, and manage your most-used content. Upgrade now for advanced features like multi-item storage and quick access!" : {
 
     },
@@ -305,7 +344,19 @@
     "Edit layout" : {
 
     },
+    "Edit search term" : {
+
+    },
+    "Edit Search Term" : {
+
+    },
     "Email address" : {
+
+    },
+    "Empty text" : {
+
+    },
+    "Enable automatic cleanup" : {
 
     },
     "Enable colored spectrograms" : {
@@ -414,7 +465,13 @@
     "HUDs" : {
 
     },
+    "Image not available" : {
+
+    },
     "In progress" : {
+
+    },
+    "Include Due Date" : {
 
     },
     "Inline" : {
@@ -434,10 +491,16 @@
     "Installed extensions" : {
 
     },
+    "Keep clipboard history for:" : {
+
+    },
     "Later" : {
 
     },
     "License key" : {
+
+    },
+    "Load More" : {
 
     },
     "Lottie JSON URL" : {
@@ -536,6 +599,12 @@
     "Never hide" : {
 
     },
+    "New Reminder" : {
+
+    },
+    "No clipboard items" : {
+
+    },
     "No custom animation available" : {
 
     },
@@ -560,6 +629,9 @@
       }
     },
     "No extension installed" : {
+
+    },
+    "No reminders" : {
 
     },
     "Non-notch display height" : {
@@ -603,6 +675,9 @@
         }
       }
     },
+    "Open Reminders App" : {
+
+    },
     "Percentage" : {
       "localizations" : {
         "en" : {
@@ -612,6 +687,12 @@
           }
         }
       }
+    },
+    "Pin" : {
+
+    },
+    "Pinned" : {
+
     },
     "Plugged In" : {
 
@@ -653,6 +734,9 @@
         }
       }
     },
+    "Recent" : {
+
+    },
     "Release name" : {
       "localizations" : {
         "en" : {
@@ -666,6 +750,9 @@
     "Remember last tab" : {
 
     },
+    "Reminders" : {
+
+    },
     "Restart" : {
 
     },
@@ -673,6 +760,15 @@
 
     },
     "Running" : {
+
+    },
+    "Save" : {
+
+    },
+    "Search clipboard" : {
+
+    },
+    "Search Term" : {
 
     },
     "seconds" : {
@@ -805,6 +901,15 @@
     "TheBoringNotch" : {
 
     },
+    "Title" : {
+
+    },
+    "Toggle All-Day Events" : {
+
+    },
+    "Toggle Completed Reminders" : {
+
+    },
     "Toggle Notch Open:" : {
 
     },
@@ -824,6 +929,9 @@
 
     },
     "unmuted" : {
+
+    },
+    "Unpin" : {
 
     },
     "Upgrade to Pro" : {

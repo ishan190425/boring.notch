@@ -12,6 +12,7 @@ import Defaults
 import KeyboardShortcuts
 import SwiftUI
 import SwiftUIIntrospect
+import EventKit
 
 struct ContentView: View {
     @EnvironmentObject var vm: BoringViewModel
@@ -311,6 +312,10 @@ struct ContentView: View {
                         NotchHomeView(albumArtNamespace: albumArtNamespace)
                     case .shelf:
                         NotchShelfView()
+                    case .reminders:
+                        BoringReminders()
+                    case .clipboard:
+                        BoringClipboard()
                     }
                 }
             }

@@ -161,6 +161,19 @@ struct CalendarView: View {
                 Text("\(selectedDate, format: .dateTime.month())")
                     .font(.system(size: 18))
                     .fontWeight(.semibold)
+                
+                Spacer()
+                
+                Button(action: {
+                    Defaults[.hideAllDayEvents].toggle()
+                    calendarManager.fetchEvents()
+                }) {
+                    Image(systemName: Defaults[.hideAllDayEvents] ? "line.3.horizontal.decrease.circle.fill" : "line.3.horizontal.decrease.circle")
+                        .foregroundColor(Defaults[.hideAllDayEvents] ? Defaults[.accentColor] : .gray)
+                }
+                .buttonStyle(PlainButtonStyle())
+                .help("Toggle All-Day Events")
+                
                 ZStack {
                     WheelPicker(selectedDate: $selectedDate, config: Config())
                     HStack {
@@ -176,6 +189,14 @@ struct CalendarView: View {
                     }
                 }
             }
+            
+            if Defaults[.hideAllDayEvents] {
+                Text("All-day events hidden")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                    .padding(.top, 2)
+            }
+            
             if calendarManager.events.isEmpty {
                 EmptyEventsView()
             } else {
