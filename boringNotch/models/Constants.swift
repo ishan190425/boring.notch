@@ -36,6 +36,11 @@ enum HideNotchOption: String, Defaults.Serializable {
     case never
 }
 
+enum LockAnimationPosition: String, Defaults.Serializable {
+    case topRight = "Top Right"
+    case underneath = "Underneath"
+}
+
 extension Defaults.Keys {
         // MARK: General
     static let menubarIcon = Key<Bool>("menubarIcon", default: true)
@@ -126,4 +131,8 @@ extension Defaults.Keys {
     
     // MARK: Wobble Animation
     static let enableWobbleAnimation = Key<Bool>("enableWobbleAnimation", default: false)
+    
+    // MARK: Unlock Animation
+    static let showUnlockAnimation = Key<Bool>("showUnlockAnimation", default: true)
+    static let lockAnimationPosition = Key<LockAnimationPosition>("lockAnimationPosition", default: .topRight)
 }

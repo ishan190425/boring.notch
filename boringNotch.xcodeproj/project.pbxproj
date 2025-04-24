@@ -97,6 +97,8 @@
 		B1D365D02C6A9A6C0047BDBC /* SystemEventIndicatorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D365CF2C6A9A6C0047BDBC /* SystemEventIndicatorModifier.swift */; };
 		B1D6FD432C6603730015F173 /* SoftwareUpdater.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D6FD422C6603730015F173 /* SoftwareUpdater.swift */; };
 		B1FEB4992C7686630066EBBC /* PanGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1FEB4982C7686630066EBBC /* PanGesture.swift */; };
+		C38B04AE2DB9591900F7709D /* LockUnlockAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B04AD2DB9591900F7709D /* LockUnlockAnimation.swift */; };
+		C38B04B02DB9593200F7709D /* UnlockDetectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C38B04AF2DB9593200F7709D /* UnlockDetectionManager.swift */; };
 		C3DB58AD2DB6FAF1000CFCA3 /* BoringReminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB58AB2DB6FAF1000CFCA3 /* BoringReminders.swift */; };
 		C3DB58AF2DB6FB22000CFCA3 /* RemindersSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB58AE2DB6FB22000CFCA3 /* RemindersSettings.swift */; };
 		C3DB58B12DB6FB33000CFCA3 /* RemindersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3DB58B02DB6FB33000CFCA3 /* RemindersManager.swift */; };
@@ -217,6 +219,8 @@
 		B1D6FD422C6603730015F173 /* SoftwareUpdater.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoftwareUpdater.swift; sourceTree = "<group>"; };
 		B1ECFA032C6FE58A002ACD87 /* CoreDisplay.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreDisplay.framework; path = ../../../../../System/Library/Frameworks/CoreDisplay.framework; sourceTree = "<group>"; };
 		B1FEB4982C7686630066EBBC /* PanGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanGesture.swift; sourceTree = "<group>"; };
+		C38B04AD2DB9591900F7709D /* LockUnlockAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockUnlockAnimation.swift; sourceTree = "<group>"; };
+		C38B04AF2DB9593200F7709D /* UnlockDetectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockDetectionManager.swift; sourceTree = "<group>"; };
 		C3DB58AB2DB6FAF1000CFCA3 /* BoringReminders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringReminders.swift; sourceTree = "<group>"; };
 		C3DB58AE2DB6FB22000CFCA3 /* RemindersSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersSettings.swift; sourceTree = "<group>"; };
 		C3DB58B02DB6FB33000CFCA3 /* RemindersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemindersManager.swift; sourceTree = "<group>"; };
@@ -308,6 +312,7 @@
 		147163B52C5D804B0068B555 /* managers */ = {
 			isa = PBXGroup;
 			children = (
+				C38B04AF2DB9593200F7709D /* UnlockDetectionManager.swift */,
 				C3DB58B92DB7F2F6000CFCA3 /* ClipboardManager */,
 				C3DB58B02DB6FB33000CFCA3 /* RemindersManager.swift */,
 				112FB7342CCF16F70015238C /* NotchSpaceManager.swift */,
@@ -419,6 +424,7 @@
 		14D570B72C5E98960011E668 /* animations */ = {
 			isa = PBXGroup;
 			children = (
+				C38B04AD2DB9591900F7709D /* LockUnlockAnimation.swift */,
 				14D570B82C5E98A20011E668 /* drop.swift */,
 				14A7E5872C64A89C008C1BE9 /* HelloAnimation.swift */,
 			);
@@ -712,6 +718,7 @@
 				14D570B92C5E98A20011E668 /* drop.swift in Sources */,
 				B19424092CD0FF01003E5DC2 /* LottieAnimationView.swift in Sources */,
 				9A987A072C73CA66005CA465 /* Ext+NSImage.swift in Sources */,
+				C38B04AE2DB9591900F7709D /* LockUnlockAnimation.swift in Sources */,
 				B1C974342C642B6D0000E707 /* MarqueeTextView.swift in Sources */,
 				9A987A052C73CA66005CA465 /* Ext+FileProvider.swift in Sources */,
 				14288DE82C6E01C800B9F80C /* ProgressIndicator.swift in Sources */,
@@ -767,6 +774,7 @@
 				B1FEB4992C7686630066EBBC /* PanGesture.swift in Sources */,
 				9A0887352C7AFF8E00C160EA /* TabSelectionView.swift in Sources */,
 				112FB7352CCF16F70015238C /* NotchSpaceManager.swift in Sources */,
+				C38B04B02DB9593200F7709D /* UnlockDetectionManager.swift in Sources */,
 				14FC6E502C7DED5600C7BEA5 /* DataTypes+Extensions.swift in Sources */,
 				14D570D22C5F6C6A0011E668 /* BoringExtrasMenu.swift in Sources */,
 				B15063542C63E18700EBB0E3 /* SettingsView.swift in Sources */,

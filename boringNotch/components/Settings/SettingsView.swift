@@ -757,6 +757,8 @@ struct Appearance: View {
     @Default(.useMusicVisualizer) var useMusicVisualizer
     @Default(.customVisualizers) var customVisualizers
     @Default(.selectedVisualizer) var selectedVisualizer
+    @Default(.showUnlockAnimation) var showUnlockAnimation
+    @Default(.lockAnimationPosition) var lockAnimationPosition
     let icons: [String] = ["logo2"]
     @State private var selectedIcon: String = "logo2"
     @State private var selectedListVisualizer: CustomVisualizer? = nil
@@ -773,6 +775,16 @@ struct Appearance: View {
                 Defaults.Toggle("Enable window shadow", key: .enableShadow)
                 Defaults.Toggle("Corner radius scaling", key: .cornerRadiusScaling)
                 Defaults.Toggle("Use simpler close animation", key: .useModernCloseAnimation)
+                Defaults.Toggle("Show unlock animation", key: .showUnlockAnimation)
+                
+                if showUnlockAnimation {
+                    Picker("Lock animation position", selection: $lockAnimationPosition) {
+                        Text("Top Right")
+                            .tag(LockAnimationPosition.topRight)
+                        Text("Underneath")
+                            .tag(LockAnimationPosition.underneath)
+                    }
+                }
             } header: {
                 Text("General")
             }

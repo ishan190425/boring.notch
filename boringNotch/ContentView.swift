@@ -19,6 +19,7 @@ struct ContentView: View {
     @StateObject var batteryModel: BatteryStatusViewModel
     @EnvironmentObject var musicManager: MusicManager
     @StateObject var webcamManager: WebcamManager = .init()
+    @StateObject private var unlockManager = UnlockDetectionManager()
 
     @ObservedObject var coordinator = BoringViewCoordinator.shared
 
@@ -37,6 +38,10 @@ struct ContentView: View {
 
     @Default(.showNotHumanFace) var showNotHumanFace
     @Default(.useModernCloseAnimation) var useModernCloseAnimation
+    @Default(.showUnlockAnimation) var showUnlockAnimation
+    @Default(.lockAnimationPosition) var lockAnimationPosition
+    
+    @State private var showUnlockAnimationView: Bool = false
 
     var body: some View {
         ZStack(alignment: .top) {
@@ -219,6 +224,39 @@ struct ContentView: View {
         .frame(maxWidth: openNotchSize.width, maxHeight: openNotchSize.height, alignment: .top)
         .shadow(color: ((vm.notchState == .open || hoverAnimation) && Defaults[.enableShadow]) ? .black.opacity(0.6) : .clear, radius: Defaults[.cornerRadiusScaling] ? 10 : 5)
         .background(dragDetector)
+        .overlay(alignment: lockAnimationPosition == .topRight ? .topTrailing : .bottom) {
+            if showUnlockAnimation && showUnlockAnimationView {
+                Group {
+                    if lockAnimationPosition == .topRight {
+                        // Top right position
+                        LockUnlockAnimation()
+                            .frame(width: 40, height: 40)
+                            .padding(.top, 4)
+                            .padding(.trailing, 8)
+                    } else {
+                        // Underneath position
+                        LockUnlockAnimation()
+                            .frame(width: 40, height: 40)
+                            .padding(.bottom, 4)
+                    }
+                }
+                .onAppear {
+                    // Hide the animation after it completes
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                        withAnimation {
+                            showUnlockAnimationView = false
+                        }
+                    }
+                }
+            }
+        }
+        .onChange(of: unlockManager.isUnlocked) { _, newValue in
+            if newValue && showUnlockAnimation {
+                withAnimation {
+                    showUnlockAnimationView = true
+                }
+            }
+        }
         .environmentObject(vm)
         .environmentObject(batteryModel)
         .environmentObject(musicManager)
